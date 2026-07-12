@@ -546,38 +546,35 @@
     scrollbar-width: none;
   }
   .testimonial-wrap::-webkit-scrollbar { display: none; }
-  .testimonial-track { display: flex; gap: 20px; }
+  .testimonial-track { display: flex; align-items: flex-start; gap: 0; }
   .testimonial-card {
     flex: none;
     box-sizing: border-box;
-    width: 400px;
-    height: 330px;
-    background: rgba(247,244,239,0.06);
-    border: 1px solid rgba(247,244,239,0.14);
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
+    width: 440px;
+    padding-right: 40px;
+    margin-right: 40px;
+    border-right: 1px dashed rgba(247,244,239,0.16);
   }
   .testimonial-card blockquote {
     margin: 0;
-    font-family: var(--font-body);
-    font-size: 0.98rem;
-    line-height: 1.6;
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    line-height: 1.18;
+    letter-spacing: 0.01em;
     color: var(--paper);
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     overflow: hidden;
   }
   .testimonial-card cite {
     display: block;
-    margin-top: auto;
-    padding-top: 18px;
+    margin-top: 22px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     color: var(--cyan);
   }
 
