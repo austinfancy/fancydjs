@@ -196,12 +196,12 @@
   }
   .nav-links a:hover::after { right: 0; }
   .nav-cta { display: none; }
-  @media (min-width: 860px) { .nav-cta { display: inline-flex; } }
+  @media (min-width: 1280px) { .nav-cta { display: inline-flex; } }
   .nav-links { display: none; }
-  @media (min-width: 860px) { .nav-links { display: flex; } }
+  @media (min-width: 1280px) { .nav-links { display: flex; } }
 
   .mobile-nav { }
-  @media (min-width: 860px) { .mobile-nav { display: none; } }
+  @media (min-width: 1280px) { .mobile-nav { display: none; } }
   .mobile-nav-toggle {
     display: flex;
     align-items: center;
