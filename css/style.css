@@ -417,7 +417,6 @@
   .badge-slot {
     width: 96px;
     height: 96px;
-    border: 1px dashed var(--card-line);
     border-radius: 10px;
     display: flex;
     align-items: center;
