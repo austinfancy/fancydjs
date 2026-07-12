@@ -916,3 +916,11 @@
   .explore-card h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; }
   .explore-card p { color: var(--fg-muted); font-size: 0.88rem; margin: 0; flex: 1; }
   .explore-arrow { font-size: 0.74rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--magenta); white-space: nowrap; }
+
+  /* ---------- LEGAL PAGES ---------- */
+  .legal-content { max-width: 68ch; }
+  .legal-content h3 { font-size: 1.4rem; margin: 40px 0 12px; }
+  .legal-content h3:first-child { margin-top: 0; }
+  .legal-content p { color: var(--fg-muted); font-size: 1rem; line-height: 1.7; margin: 0 0 16px; }
+  .legal-content ul { color: var(--fg-muted); font-size: 1rem; line-height: 1.7; padding-left: 20px; margin: 0 0 16px; }
+  .legal-content li { margin-bottom: 6px; }
