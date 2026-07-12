@@ -901,7 +901,10 @@
   .fi-pride {
     color: rgba(247,244,239,0.6);
     font-weight: 600;
-    white-space: normal;
+    white-space: nowrap;
+  }
+  @media (max-width: 700px) {
+    .fi-pride { white-space: normal; }
   }
   .fi-pride svg { color: var(--magenta); }
   .footer-bottom {
