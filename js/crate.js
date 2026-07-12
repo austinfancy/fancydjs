@@ -2,7 +2,6 @@
     var wrap = document.getElementById('crate-wrap');
     var track = document.getElementById('crate-track');
     if (!wrap || !track) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     var paused = false;
     var resumeTimer = null;

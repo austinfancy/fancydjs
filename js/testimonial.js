@@ -2,7 +2,6 @@
     var wrap = document.getElementById('testimonial-wrap');
     var track = document.getElementById('testimonial-track');
     if (!wrap || !track) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     var paused = false;
     var resumeTimer = null;
