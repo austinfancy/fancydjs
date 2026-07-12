@@ -1,15 +1,13 @@
-(function () {
+<script>
+  (function () {
     var wrap = document.getElementById('crate-wrap');
-    var track = document.getElementById('crate-track');
-    if (!wrap || !track) return;
-
-    var paused = false;
+    if (!wrap) return;
     var resumeTimer = null;
     function pause() {
-      paused = true;
+      wrap.classList.add('paused');
       if (resumeTimer) clearTimeout(resumeTimer);
     }
-    function resume() { paused = false; }
+    function resume() { wrap.classList.remove('paused'); }
     function resumeAfterDelay() {
       if (resumeTimer) clearTimeout(resumeTimer);
       resumeTimer = setTimeout(resume, 2500);
@@ -18,16 +16,4 @@
     wrap.addEventListener('mouseleave', resume);
     wrap.addEventListener('touchstart', pause, { passive: true });
     wrap.addEventListener('touchend', resumeAfterDelay, { passive: true });
-
-    function step() {
-      var oneSetWidth = track.scrollWidth / 2;
-      if (oneSetWidth > 0 && !paused) {
-        wrap.scrollLeft += 0.25;
-        if (wrap.scrollLeft >= oneSetWidth) {
-          wrap.scrollLeft -= oneSetWidth;
-        }
-      }
-      requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
   })();

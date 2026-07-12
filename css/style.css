@@ -538,15 +538,23 @@
     position: relative;
   }
   .testimonial-wrap {
-    overflow-x: auto;
+    overflow: hidden;
     margin-top: 28px;
     padding-top: 4px;
     padding-bottom: 4px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
-  .testimonial-wrap::-webkit-scrollbar { display: none; }
-  .testimonial-track { display: flex; align-items: flex-start; gap: 0; }
+  .testimonial-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    width: max-content;
+    animation: testimonialScroll 120s linear infinite;
+  }
+  .testimonial-wrap.paused .testimonial-track { animation-play-state: paused; }
+  @keyframes testimonialScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
   .testimonial-card {
     flex: none;
     box-sizing: border-box;
@@ -730,16 +738,20 @@
 
   /* ---------- MUSIC CRATE ---------- */
   .crate-wrap {
-    overflow-x: auto;
+    overflow: hidden;
     margin-top: 24px;
     padding-top: 8px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
-  .crate-wrap::-webkit-scrollbar { display: none; }
   .crate-track {
     display: flex;
     gap: 20px;
+    width: max-content;
+    animation: crateScroll 90s linear infinite;
+  }
+  .crate-wrap.paused .crate-track { animation-play-state: paused; }
+  @keyframes crateScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
   .sleeve {
     flex: none;
