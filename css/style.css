@@ -536,6 +536,15 @@
     color: var(--paper);
     position: relative;
   }
+  .testimonial::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,87,235,0.5), transparent);
+  }
   .testimonial-wrap {
     overflow: hidden;
     margin-top: 28px;
