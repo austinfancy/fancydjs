@@ -535,6 +535,7 @@
     background: var(--ink);
     color: var(--paper);
     position: relative;
+    padding: clamp(48px, 7vw, 80px) 0;
   }
   .testimonial::after {
     content: '';
@@ -574,8 +575,8 @@
   .testimonial-card blockquote {
     margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-    line-height: 1.18;
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+    line-height: 1.2;
     letter-spacing: 0.01em;
     color: var(--paper);
     display: -webkit-box;
@@ -585,7 +586,7 @@
   }
   .testimonial-card cite {
     display: block;
-    margin-top: 22px;
+    margin-top: 16px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.08em;
