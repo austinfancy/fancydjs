@@ -544,7 +544,7 @@
   }
   .testimonial-track {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
     width: max-content;
     animation: testimonialScroll 120s linear infinite;
