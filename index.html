@@ -8,6 +8,13 @@
 <link rel="canonical" href="https://www.fancydjs.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7B83X2B8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C7B83X2B8D');
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -111,7 +118,7 @@
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn btn-solid nav-cta" href="/contact">Check Your Date</a>
+    <a class="btn btn-solid nav-cta" href="/contact" data-ga-cta="check_your_date" data-ga-location="nav">Check Your Date</a>
     <details class="mobile-nav">
       <summary class="mobile-nav-toggle" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -126,7 +133,7 @@
           <li><a href="/client-portal">Client Portal</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
-        <a class="btn btn-solid" href="/contact">Check Your Date</a>
+        <a class="btn btn-solid" href="/contact" data-ga-cta="check_your_date" data-ga-location="mobile_nav">Check Your Date</a>
       </div>
     </details>
   </div>
@@ -150,8 +157,8 @@
       <h1>Your wedding gets one soundtrack. Let&rsquo;s make it <span class="accent">right.</span></h1>
       <p class="lede">Fancy Entertainment handles the music so you can enjoy the day &mdash; professional setup, seamless execution, and a dance floor that stays full all night.</p>
       <div class="hero-actions">
-        <a class="btn btn-solid" href="/contact">Check Your Date</a>
-        <a class="btn btn-outline" href="/pricing">See Pricing</a>
+        <a class="btn btn-solid" href="/contact" data-ga-cta="check_your_date" data-ga-location="hero">Check Your Date</a>
+        <a class="btn btn-outline" href="/pricing" data-ga-cta="see_pricing" data-ga-location="hero">See Pricing</a>
       </div>
     </div>
   </section>
@@ -336,5 +343,6 @@
 
 <script src="/js/hero-video.js"></script>
 <script src="/js/testimonial.js"></script>
+<script src="/js/analytics.js"></script>
 </body>
 </html>
