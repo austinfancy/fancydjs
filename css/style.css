@@ -454,6 +454,25 @@
   .rider {
     background: var(--bg-raised, var(--bg));
   }
+  .rider-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .rider-split .section-head { margin-bottom: 0; max-width: none; }
+  .rider-photo {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+  }
+  @media (max-width: 860px) {
+    .rider-split { grid-template-columns: 1fr; gap: 24px; }
+    .rider-photo { height: 240px; order: -1; }
+  }
   .rider-grid {
     display: grid;
     grid-template-columns: 1fr;
