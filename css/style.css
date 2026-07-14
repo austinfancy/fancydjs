@@ -982,3 +982,28 @@
   #not-found { padding: clamp(100px, 16vw, 180px) 0; }
   #not-found .section-head { align-items: center; text-align: center; margin-left: auto; margin-right: auto; max-width: 56ch; }
   #not-found .hero-actions { justify-content: center; }
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .sticky-mobile-cta { display: none; }
+  @media (max-width: 640px) {
+    .sticky-mobile-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 60;
+      background: var(--magenta);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+      box-shadow: 0 -4px 16px rgba(13,13,12,0.18);
+    }
+    .sticky-mobile-cta + footer { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  }
