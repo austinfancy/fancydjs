@@ -134,6 +134,7 @@
     transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color .15s ease;
   }
   .btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+  a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
   .btn-solid {
     background: var(--magenta);
     color: #ffffff;
