@@ -514,7 +514,7 @@
     border-bottom: 1px solid var(--card-line);
   }
   @media (min-width: 640px) {
-    .vd-row { grid-template-columns: 200px 1fr; gap: 24px; align-items: center; }
+    .vd-row { grid-template-columns: 200px 1fr; gap: 24px; align-items: start; }
   }
   .vd-category {
     display: flex;
@@ -527,20 +527,25 @@
     color: var(--fg-muted);
   }
   .vd-category svg { flex: none; width: 20px; height: 20px; }
-  .vd-names { display: flex; flex-wrap: wrap; gap: 10px; }
-  .vd-chip {
-    display: inline-flex;
-    align-items: center;
+  .vd-names { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  @media (min-width: 900px) { .vd-names { grid-template-columns: repeat(2, 1fr); } }
+  .vd-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     border: 1px solid var(--card-line);
     background: var(--card-bg);
-    padding: 8px 14px;
-    font-size: 0.88rem;
-    font-weight: 600;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease;
   }
+  .vd-card:hover { border-color: var(--magenta); transform: translateY(-2px); }
+  .vd-name { font-weight: 700; font-size: 0.92rem; color: var(--fg); }
+  .vd-card:hover .vd-name { color: var(--magenta); }
+  .vd-desc { font-size: 0.82rem; color: var(--fg-muted); line-height: 1.5; }
   .vd-chip-muted { color: var(--fg-muted); font-weight: 400; border-style: dashed; }
-  a.vd-chip { text-decoration: none; color: var(--fg); }
-  a.vd-chip:hover { border-color: var(--magenta); color: var(--magenta); }
-  .vd-row-open .vd-category { color: var(--magenta); }
+  aa.vd-row-open .vd-category { color: var(--magenta); }
   .vd-chip-open {
     border-style: dashed;
     border-color: var(--magenta);
