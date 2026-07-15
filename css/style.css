@@ -39,6 +39,7 @@
     --paper: #f1e6cf;
     --magenta: #ff57eb;
     --magenta-deep: #c81fb0;
+    --magenta-darker: #8f007e;
     --cyan: #2fd8f5;
     --gray: #8f8a82;
 
@@ -138,10 +139,10 @@
   .btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
   a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
   .btn-solid {
-    background: var(--magenta);
+    background: var(--magenta-deep);
     color: #ffffff;
   }
-  .btn-solid:hover { transform: translateY(-2px); background: var(--magenta-deep); }
+  .btn-solid:hover { transform: translateY(-2px); background: var(--magenta-darker); }
   .btn-outline {
     background: transparent;
     color: var(--hero-fg);
@@ -946,7 +947,7 @@
   }
   .footer-bottom a:hover { color: var(--magenta); }
 
-  ::selection { background: var(--magenta); color: #fff; }
+  ::selection { background: var(--magenta-deep); color: #fff; }
 
   /* ---------- EXPLORE GRID (home) ---------- */
   .explore-grid {
@@ -1002,7 +1003,7 @@
       right: 0;
       bottom: 0;
       z-index: 60;
-      background: var(--magenta);
+      background: var(--magenta-deep);
       color: #ffffff;
       text-decoration: none;
       font-weight: 800;
